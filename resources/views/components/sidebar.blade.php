@@ -1,14 +1,14 @@
 <!-- resources/views/components/sidebar.blade.php -->
-<div class="w-48 bg-gray-800 text-white h-screen">
+<div class="w-48 bg-slate-900 text-white h-screen">
     <div class="p-6">
         <ul>
             <li class="mb-4">
-                <a href="{{ ('dashboard') }}" class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-2 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8m4 4h4" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7m-2 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8m4 4h4" />
                     </svg>
                     Dashboard
-                </a>
+                </x-nav-link>
             </li>
             <li class="mb-4">
                 <a href="{{ ('karyawan.index') }}" class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">
